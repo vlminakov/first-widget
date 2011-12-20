@@ -44,6 +44,14 @@ body {
   text-align: center;
 }
 
+#game_button {
+	background: red;
+}
+
+#go_back_button {
+	background: grey;
+}
+
 #back_button {
   background: grey;
 }
@@ -57,7 +65,11 @@ body {
 }
 /* our three views */
 #welcome {
-  display: block;  
+  display: block;
+}
+
+#game{
+	background: green;
 }
 
 #map { 

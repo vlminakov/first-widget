@@ -4,15 +4,22 @@
 run(function () {
     // immediately invoked on first run
     var init = (function () {
-        if (navigator.network.connection.type == Connection.NONE) {
-            alert("No internet connection - we won't be able to show you any maps");
-        } else {
-            alert("We can reach Google - get ready for some awesome maps!");
-        }
+//        if (navigator.network.connection.type == Connection.NONE) {
+//            alert("No internet connection - we won't be able to show you any maps");
+//        } else {
+//            alert("We can reach Google - get ready for some awesome maps!");
+//        }
     })();
     
     // a little inline controller
     when('#welcome');
+    when('#game');
+    when('#game_button', function() {
+		display('#game');
+	});
+    when('#go_back_button', function() {
+		display('#welcome');
+	});
     when('#settings', function() {
 		// load settings from store and make sure we persist radio buttons.
 		store.get('config', function(saved) {
