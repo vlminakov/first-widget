@@ -13,13 +13,7 @@ run(function () {
     
     // a little inline controller
     when('#welcome');
-    when('#game');
-    when('#game_button', function() {
-		display('#game');
-	});
-    when('#go_back_button', function() {
-		display('#welcome');
-	});
+    
     when('#settings', function() {
 		// load settings from store and make sure we persist radio buttons.
 		store.get('config', function(saved) {
@@ -60,4 +54,11 @@ run(function () {
         });
         display('#welcome');
     });
+    when('#game');
+    when('#game_button', function() {
+		display('#game');
+	});
+    when('#go_back_button', function() {
+		display('#welcome');
+	});
 });
